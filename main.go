@@ -57,6 +57,6 @@ func main() {
 			f.Close()
 		}
 
-		time.Sleep(1)
+		time.Sleep(1 * time.Second)
 	}
 }
