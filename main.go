@@ -20,6 +20,7 @@ func main() {
 		filePath := fmt.Sprintf("%s/%s.log", storageDir, date)
 
 		out, err := exec.Command("bash", "-c", "ss -nt src :443 | tail -n +2 | awk '{print $5}' | cut -d: -f1 | sort | uniq").Output()
+		// out, err := exec.Command("bash", "-c", "ss -nt src :80 | tail -n +2 | awk '{print $5}' | cut -d: -f4 | cut -d] -f1 | sort | uniq").Output()
 
 		if err != nil {
 			fmt.Println(err.Error())
